@@ -3,6 +3,7 @@ import * as Types from '../lib/types'
 import Styles from '../styles/CV.module.scss'
 import { StructuredText } from 'react-datocms';
 import { formatDate } from '../lib/dateFormat';
+import { byName } from '../lib/sort';
 
 
 
@@ -17,7 +18,9 @@ const Company = ({ companyName, address, skills, roles, customIcon }: Types.Comp
 
         {skills &&
           <div className={Styles.skills}>
-            {skills.map(
+          {skills
+            .sort(byName)
+            .map(
               skill => (
                 <div className={Styles.icon} key={skill.id}>
                   <img src={skill.icon.url} alt={skill.name} title={skill.name} />

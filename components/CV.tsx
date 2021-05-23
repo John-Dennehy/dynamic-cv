@@ -43,7 +43,7 @@ const CV = ({ name, personalSummary, contactDetails, skills, experience }: CVPro
         </div>
       </header>
 
-      <div className={Styles.body}>
+      <div className={Styles.content}>
 
         <SectionContainer name="skills" label="Technical Skills" iconSrc={"/img/heroicons-solid_code.svg"} >
           <Skills data={skills} />

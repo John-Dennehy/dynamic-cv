@@ -1,0 +1,19 @@
+.standard {
+  color: var(--clr-neutral-100);
+  font-family: inter, sans-serif;
+  font-weight: 400;
+  font-size: smaller;
+  background-color: var(--clr-primary-300);
+  width: max-content;
+  padding: 0.25rem 0.5rem;
+  // margin: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  gap: 5px;
+}
+
+.showcase {
+  @extend .standard;
+  background-color: var(--clr-primary-400);
+}

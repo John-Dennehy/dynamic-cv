@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-800: hsl(207, 15%, 15%);
+  --clr-neutral-700: hsl(207, 12%, 30%);
+  --clr-neutral-400: hsl(207, 10%, 50%);
+  --clr-neutral-200: hsl(207, 10%, 90%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --clr-primary-500: hsl(210, 100%, 30%);
+  --clr-primary-400: hsl(210, 100%, 45%);
+  --clr-primary-300: hsl(210, 90%, 60%);
+  --clr-primary-200: hsl(210, 80%, 70%);
+  --clr-primary-100: hsl(210, 70%, 80%);
+
+  --clr-accent_1-400: hsl(105, 54%, 52%);
+  --clr-accent_2-400: hsl(346, 76%, 60%);
+  --clr-accent_3-400: hsl(54, 100%, 45%);
+
+  --bg: var(--clr-neutral-100);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  display: grid;
+  place-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

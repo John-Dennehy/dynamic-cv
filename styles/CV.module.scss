@@ -1,0 +1,268 @@
+.cv-container {
+  --padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  background-color: white;
+
+  overflow: hidden;
+
+  width: 210mm;
+  height: 297mm;
+  margin: 2rem;
+
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  // @media only screen and (max-width: 220mm) {
+  //   transform: scale(0.8);
+  // }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  padding: var(--padding);
+  background-color: var(--clr-primary-400);
+  // width: 100%;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    color: var(--clr-neutral-100);
+    max-width: 100%;
+
+    h1 {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 4rem;
+      line-height: 5rem;
+      align-self: stretch;
+      text-align: center;
+      letter-spacing: -0.25rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 1rem;
+      text-align: justify;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      letter-spacing: 0.03rem;
+      overflow-wrap: break-word;
+    }
+  }
+
+  .contact-info {
+    --height: 1.3rem;
+    white-space: nowrap;
+    margin: 0;
+    justify-self: baseline;
+    font-size: var(--height);
+    color: white;
+
+
+    a {
+      font-size: 0.9rem;
+      img {
+        padding: 0.1rem;
+      }
+    }
+
+    li {
+      padding: 0.25rem;
+      list-style: none;
+    }
+
+    .icon {
+      height: var(--height);
+      display: inline-block;
+      margin: 0 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 4rem;
+    margin: 0rem;
+    padding: 0.25rem;
+    white-space: nowrap;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+.body {
+  padding: var(--padding);
+
+  .section-container {
+    color: var(--clr-primary-400);
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+
+    & .section-title {
+      display: flex;
+      gap: 0.5rem;
+      padding: var(--padding) 0;
+      vertical-align: middle;
+
+      .icon {
+        height: var(--height);
+        display: inline-block;
+        margin: 0 0.5rem;
+        vertical-align: middle;
+      }
+
+      h2 {
+        margin: 0;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        align-items: center;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.skills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience {
+  color: var(--clr-neutral-700);
+  padding: 0;
+  margin: 0;
+
+  h1,
+  h2 {
+    font-weight: 500;
+  }
+
+  .company-container {
+    display: grid;
+    grid-template-columns: minmax(150px, 30%) 2px 1fr;
+    grid-template-rows: 1.5rem 1fr;
+
+    padding: 1rem 0;
+
+    gap: 0.5rem 2rem;
+    margin: 0;
+    grid-template-areas:
+      "company icon roles"
+      "company line roles";
+    align-items: start;
+
+    .company {
+      grid-area: company;
+      display: flex;
+      flex-direction: column;
+
+      .company-name {
+        padding: 0;
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .address {
+        font-style: italic;
+        font-size: 0.8rem;
+      }
+
+      .skills {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .icon {
+          filter: brightness(60%);
+
+          img {
+            height: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .icon {
+      grid-area: icon;
+      display: grid;
+      justify-content: center;
+    }
+
+    .line {
+      grid-area: line;
+      display: grid;
+      justify-content: center;
+      height: 115%;
+      background-color: var(--clr-primary-200);
+    }
+
+    .roles {
+      grid-area: roles;
+      
+
+      .role-title {
+        display: flex ;
+        flex-direction: row;
+        justify-content: space-between;
+        // gap: 3rem;
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+
+        .date {
+          // color:blueviolet;
+        }
+        .job-title{
+          // color: red;
+        }
+      }
+
+      // h1, h2 {
+      //   font-size: 1.2rem;
+      //   padding: 0;
+      //   margin: 0;
+      // }
+
+      p {
+        font-size: 0.8rem;
+        margin: .2rem;
+      }
+
+      ul {
+        padding-inline-start: 1rem;
+      }
+    }
+  }
+}
+
+.footer {
+  color: var(--clr-neutral-100);
+  display: grid;
+  place-items: center;
+  padding: var(--padding);
+  background-color: var(--clr-primary-400);
+}

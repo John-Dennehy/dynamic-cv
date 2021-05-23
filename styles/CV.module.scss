@@ -1,7 +1,7 @@
 .container {
   display: grid;
-    place-items: center;
-    margin: 2rem;
+  place-items: center;
+  margin: 2rem;
 }
 
 .cv-container {
@@ -9,7 +9,8 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   position: relative;
-  background-color: white;  overflow: hidden;
+  background-color: white;
+  overflow: hidden;
 
   width: 210mm;
   height: 297mm;
@@ -29,7 +30,7 @@
   gap: 2rem;
   padding: var(--padding);
   background-color: var(--clr-primary-400);
-  -webkit-print-color-adjust:exact;
+  -webkit-print-color-adjust: exact;
   // width: 100%;
 
   .title {
@@ -73,7 +74,6 @@
     justify-self: baseline;
     font-size: var(--height);
     color: white;
-
 
     a {
       font-size: 0.9rem;
@@ -176,6 +176,12 @@
       "company line roles";
     align-items: start;
 
+    &:nth-last-child(1) {
+      .line {
+        height: 90%;
+      }
+    }
+
     .company {
       grid-area: company;
       display: flex;
@@ -217,41 +223,27 @@
       grid-area: line;
       display: grid;
       justify-content: center;
-      height: 115%;
+      height: calc(100% + 1rem);
       background-color: var(--clr-primary-200);
-      -webkit-print-color-adjust:exact;
+      -webkit-print-color-adjust: exact;
     }
 
     .roles {
       grid-area: roles;
-      
 
       .role-title {
-        display: flex ;
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         // gap: 3rem;
         font-size: 1.2rem;
         padding: 0;
         margin: 0;
-
-        .date {
-          // color:blueviolet;
-        }
-        .job-title{
-          // color: red;
-        }
       }
-
-      // h1, h2 {
-      //   font-size: 1.2rem;
-      //   padding: 0;
-      //   margin: 0;
-      // }
 
       p {
         font-size: 0.8rem;
-        margin: .2rem;
+        margin: 0.2rem;
       }
 
       ul {

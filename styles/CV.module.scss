@@ -24,14 +24,19 @@
   .container {
     display: grid;
     place-items: center;
-    margin: 2rem;
+  }
+}
 
+@media only screen and (min-width: 250mm) {
+  .container {
+    margin: 2rem;
   }
 }
 
 .cv-container {
   --padding: 1rem;
   display: grid;
+  max-height: 999999px;
   grid-template-rows: auto 1fr auto;
   position: relative;
   background-color: white;
@@ -66,12 +71,13 @@
       font-family: Inter;
       font-style: normal;
       font-weight: 200;
-      font-size: 4rem;
-      line-height: 5rem;
+      font-size: 68px;
+      line-height: 64px;
       align-self: stretch;
       text-align: center;
       letter-spacing: -0.25rem;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     p {
@@ -81,15 +87,15 @@
       font-family: Inter;
       font-style: normal;
       font-weight: normal;
-      font-size: 0.9rem;
-      line-height: 1.2rem;
-      letter-spacing: 0.03rem;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.45px;
       overflow-wrap: break-word;
     }
   }
 
   .contact-info {
-    --height: 1.3rem;
+    --height: 18px;
     white-space: nowrap;
     margin: 0;
     justify-self: baseline;
@@ -97,14 +103,14 @@
     color: white;
 
     a {
-      font-size: 0.9rem;
+      font-size: 12px;
       img {
-        padding: 0.1rem;
+        padding: 0px;
       }
     }
 
     li {
-      padding: 0.25rem;
+      padding: 0.2rem;
       list-style: none;
     }
 
@@ -119,7 +125,6 @@
   h1 {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 4rem;
     margin: 0rem;
     padding: 0.25rem;
     white-space: nowrap;
@@ -142,7 +147,7 @@
     & .section-title {
       display: flex;
       gap: 0.5rem;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       vertical-align: middle;
 
       .icon {
@@ -211,12 +216,12 @@
       .company-name {
         padding: 0;
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       .address {
         font-style: italic;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
       }
 
       .skills {
@@ -228,7 +233,7 @@
           filter: brightness(60%);
 
           img {
-            height: 1.2rem;
+            height: 1rem;
           }
         }
       }
@@ -257,13 +262,13 @@
         flex-direction: row;
         justify-content: space-between;
         // gap: 3rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0;
         margin: 0;
       }
 
       p {
-        font-size: 0.8rem;
+        font-size: 10px;
         margin: 0.5rem 0rem;
       }
 
